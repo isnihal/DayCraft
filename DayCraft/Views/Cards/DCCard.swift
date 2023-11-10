@@ -13,11 +13,10 @@ struct DCCard: View {
             HStack(){
                 ZStack{
                     Circle()
-                        .foregroundStyle(.black)
                         .frame(height: 100)
                     Image(systemName: "figure.outdoor.cycle")
                         .scaleEffect(2.5)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.background)
                 }
                 VStack(alignment: .leading){
                     Text("Cycling")

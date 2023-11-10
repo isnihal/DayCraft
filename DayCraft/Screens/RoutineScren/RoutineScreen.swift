@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct RoutineScreen: View {
+    @State var isShowingSheet = false
+    
     var body: some View {
         NavigationStack{
             VStack(){
-                RoutineHeader()
+                RoutineHeader(isShowingSheet: $isShowingSheet)
                 .padding()
                 Spacer().frame(height: 32)
                 List{
@@ -54,6 +56,9 @@ struct RoutineScreen: View {
                 Spacer()
             }
             .ignoresSafeArea(edges: .bottom)
+            .sheet(isPresented: $isShowingSheet, content: {
+                CreateRoutineSheet(date: .now, routineName: "", routineNotes: "")
+            })
         }
     }
 }
@@ -63,13 +68,17 @@ struct RoutineScreen: View {
 }
 
 struct RoutineHeader: View {
+    @Binding var isShowingSheet: Bool
+    
     var body: some View {
         HStack{
             Text("Your\nRoutines")
                 .font(.system(size: 32))
                 .fontWeight(.heavy)
             Spacer()
-            Button(action: {}, label: {
+            Button(action: {
+                isShowingSheet = true
+            }, label: {
                 DCButtonLabel(symbolName: "plus")
             })
         }
