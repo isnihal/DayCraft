@@ -18,6 +18,7 @@ struct TimeLineView: View {
                     .padding(.leading,4)
                     .offset(CGSize(width: 0, height: -7))
                 DCCard()
+                    .padding(.trailing)
             }
         }
     }
@@ -29,7 +30,7 @@ struct CircleLineView: View {
             Circle()
                 .frame(height: 30)
             Rectangle()
-                .frame(width: 2, height: 160)
+                .frame(width: 2, height: 180)
         }
     }
 }
