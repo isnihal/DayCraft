@@ -12,6 +12,8 @@
 		A06A5AA12AFE610D00AD0907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A06A5AA02AFE610D00AD0907 /* Assets.xcassets */; };
 		A06A5AA42AFE610D00AD0907 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A06A5AA32AFE610D00AD0907 /* Preview Assets.xcassets */; };
 		A08A69532AFE85BB00F26990 /* RoutineScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A69522AFE85BB00F26990 /* RoutineScreen.swift */; };
+		A08A695C2AFE987100F26990 /* DCButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A695B2AFE987100F26990 /* DCButtonLabel.swift */; };
+		A08A695F2AFE991000F26990 /* DCCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A695E2AFE991000F26990 /* DCCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		A06A5AA02AFE610D00AD0907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A06A5AA32AFE610D00AD0907 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A08A69522AFE85BB00F26990 /* RoutineScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineScreen.swift; sourceTree = "<group>"; };
+		A08A695B2AFE987100F26990 /* DCButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCButtonLabel.swift; sourceTree = "<group>"; };
+		A08A695E2AFE991000F26990 /* DCCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +57,9 @@
 		A06A5A9B2AFE610C00AD0907 /* DayCraft */ = {
 			isa = PBXGroup;
 			children = (
+				A08A69582AFE984400F26990 /* Screens */,
+				A08A69592AFE984D00F26990 /* Views */,
 				A06A5A9C2AFE610C00AD0907 /* DayCraftApp.swift */,
-				A06A5A9E2AFE610C00AD0907 /* FocusScreen.swift */,
-				A08A69522AFE85BB00F26990 /* RoutineScreen.swift */,
 				A06A5AA02AFE610D00AD0907 /* Assets.xcassets */,
 				A06A5AA22AFE610D00AD0907 /* Preview Content */,
 			);
@@ -68,6 +72,56 @@
 				A06A5AA32AFE610D00AD0907 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A08A69582AFE984400F26990 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A08A69602AFE992E00F26990 /* FocusScreen */,
+				A08A69612AFE993700F26990 /* RoutineScren */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A08A69592AFE984D00F26990 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A08A695D2AFE990500F26990 /* Cards */,
+				A08A695A2AFE985200F26990 /* ButtonLabels */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A08A695A2AFE985200F26990 /* ButtonLabels */ = {
+			isa = PBXGroup;
+			children = (
+				A08A695B2AFE987100F26990 /* DCButtonLabel.swift */,
+			);
+			path = ButtonLabels;
+			sourceTree = "<group>";
+		};
+		A08A695D2AFE990500F26990 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				A08A695E2AFE991000F26990 /* DCCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		A08A69602AFE992E00F26990 /* FocusScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A06A5A9E2AFE610C00AD0907 /* FocusScreen.swift */,
+			);
+			path = FocusScreen;
+			sourceTree = "<group>";
+		};
+		A08A69612AFE993700F26990 /* RoutineScren */ = {
+			isa = PBXGroup;
+			children = (
+				A08A69522AFE85BB00F26990 /* RoutineScreen.swift */,
+			);
+			path = RoutineScren;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06A5A9F2AFE610C00AD0907 /* FocusScreen.swift in Sources */,
+				A08A695C2AFE987100F26990 /* DCButtonLabel.swift in Sources */,
+				A08A695F2AFE991000F26990 /* DCCard.swift in Sources */,
 				A08A69532AFE85BB00F26990 /* RoutineScreen.swift in Sources */,
 				A06A5A9D2AFE610C00AD0907 /* DayCraftApp.swift in Sources */,
 			);

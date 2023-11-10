@@ -20,19 +20,13 @@ struct FocusScreen: View {
                     NavigationLink {
                         RoutineScreen()
                     } label: {
-                        ZStack{
-                            Circle()
-                                .frame(width: 60,height: 60)
-                                .foregroundStyle(Color(uiColor: .label))
-                            Image(systemName: "list.bullet")
-                                .imageScale(.large)
-                                .foregroundStyle(.background)
-                        }
+                        DCButtonLabel(symbolName: "list.bullet")
                     }
                 }
             }
             .padding()
         }
+        .accentColor(Color(uiColor: .label))
     }
 }
 
