@@ -11,6 +11,7 @@ struct CreateRoutineSheet: View {
     @State var date: Date
     @State var routineName: String
     @State var routineNotes: String
+    @State var selectedIcon: String
     
     var body: some View {
         VStack{
@@ -26,7 +27,7 @@ struct CreateRoutineSheet: View {
                 ZStack{
                     Circle()
                         .frame(height: 100)
-                    Image(systemName: "figure.outdoor.cycle")
+                    Image(systemName: selectedIcon)
                         .scaleEffect(2.5)
                         .foregroundStyle(.background)
                 }
@@ -63,9 +64,7 @@ struct CreateRoutineSheet: View {
                     .padding(.horizontal,16)
             }
             Spacer().frame(height: 16)
-            Rectangle()
-                .foregroundStyle(Color(uiColor: .label).opacity(0.1))
-                .cornerRadius(8)
+            EmojiContainerView(selectedIcon: $selectedIcon)
             Spacer()
         }
         .padding()
@@ -73,5 +72,5 @@ struct CreateRoutineSheet: View {
 }
 
 #Preview {
-    CreateRoutineSheet(date: .distantFuture, routineName: "",routineNotes: "")
+    CreateRoutineSheet(date: .distantFuture, routineName: "",routineNotes: "", selectedIcon: "figure.boxing")
 }
