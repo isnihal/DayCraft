@@ -17,9 +17,7 @@ struct CreateRoutineSheet: View {
             HStack{
                 Spacer()
                 Button(action: {}, label: {
-                    Image(systemName: "x.circle.fill")
-                        .symbolRenderingMode(.hierarchical)
-                        .scaleEffect(2)
+                    Text("Done")
                 })
             }
             .padding(.top,16)
@@ -46,7 +44,7 @@ struct CreateRoutineSheet: View {
                     TextField("Notes", text: $routineNotes)
                         .multilineTextAlignment(.leading)
                         .lineLimit(2)
-                        .frame(width: .infinity, height: 80, alignment: .top)
+                        .frame(height: 80, alignment: .top)
                         .padding(8)
                         .overlay(
                                             RoundedRectangle(cornerRadius: 8)
