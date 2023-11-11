@@ -64,7 +64,7 @@ struct CreateRoutineSheet: View {
                     .padding(.horizontal,16)
             }
             Spacer().frame(height: 16)
-            EmojiContainerView(selectedIcon: $selectedIcon)
+            IconContainerView(selectedIcon: $selectedIcon)
             Spacer()
         }
         .padding()
