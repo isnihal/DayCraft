@@ -15,24 +15,11 @@ struct FocusScreen: View {
                 FocusView()
                     .offset(CGSize(width: 0, height: -20))
                 Spacer()
-                HStack{
-                    Spacer()
-                    NavigationLink {
-                        RoutineScreen()
-                    } label: {
-                        ZStack{
-                            Circle()
-                                .frame(width: 60,height: 60)
-                                .foregroundStyle(Color(uiColor: .label))
-                            Image(systemName: "list.bullet")
-                                .imageScale(.large)
-                                .foregroundStyle(.background)
-                        }
-                    }
-                }
+                RoutineButtonLink()
             }
             .padding()
         }
+        .accentColor(Color(uiColor: .label))
     }
 }
 
@@ -40,7 +27,7 @@ struct FocusScreen: View {
     FocusScreen()
 }
 
-struct FocusView: View {
+private struct FocusView: View {
     var body: some View {
         VStack(spacing:0){
             ZStack{
@@ -61,6 +48,19 @@ struct FocusView: View {
                 .font(.system(size: 24))
                 .fontWeight(.regular)
                 .foregroundStyle(.secondary)
+        }
+    }
+}
+
+private struct RoutineButtonLink: View {
+    var body: some View {
+        HStack{
+            Spacer()
+            NavigationLink {
+                RoutineScreen()
+            } label: {
+                DCButtonLabel(symbolName: "list.bullet")
+            }
         }
     }
 }
