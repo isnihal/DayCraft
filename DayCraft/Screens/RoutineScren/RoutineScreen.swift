@@ -57,7 +57,7 @@ struct RoutineScreen: View {
             }
             .ignoresSafeArea(edges: .bottom)
             .sheet(isPresented: $isShowingSheet, content: {
-                CreateRoutineSheet(date: .now, routineName: "", routineNotes: "",selectedIcon: "figure.boxing")
+                CreateRoutineSheet(isShowingSheet: $isShowingSheet,date: .now, routineName: "", routineNotes: "",selectedIcon: "figure.boxing")
             })
         }
     }

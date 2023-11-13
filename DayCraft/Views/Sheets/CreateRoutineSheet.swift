@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CreateRoutineSheet: View {
+    
+    @Binding var isShowingSheet: Bool
+    
     @State var date: Date
     @State var routineName: String
     @State var routineNotes: String
@@ -16,8 +19,17 @@ struct CreateRoutineSheet: View {
     var body: some View {
         VStack{
             HStack{
+                Button(action: {
+                    #warning("Check if changes should be discarded")
+                    isShowingSheet = false
+                }, label: {
+                    Text("Cancel")
+                })
                 Spacer()
-                Button(action: {}, label: {
+                Button(action: {
+                    #warning("Save routine here")
+                    isShowingSheet = false
+                }, label: {
                     Text("Done")
                 })
             }
@@ -72,5 +84,5 @@ struct CreateRoutineSheet: View {
 }
 
 #Preview {
-    CreateRoutineSheet(date: .distantFuture, routineName: "",routineNotes: "", selectedIcon: "figure.boxing")
+    CreateRoutineSheet(isShowingSheet: .constant(true),date: .distantFuture, routineName: "",routineNotes: "", selectedIcon: "figure.boxing")
 }
