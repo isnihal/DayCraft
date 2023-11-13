@@ -22,7 +22,7 @@ struct IconContainerView: View {
             Rectangle()
                 .foregroundStyle(Color(uiColor: .label).opacity(0.1))
                 .cornerRadius(8)
-            IconGrid(selectedIcon: $selectedIcon, columnLayout: columnLayout)
+            IconGridView(selectedIcon: $selectedIcon, columnLayout: columnLayout)
         }
     }
 }
@@ -31,7 +31,7 @@ struct IconContainerView: View {
     IconContainerView(selectedIcon: .constant("figure.boxing"))
 }
 
-struct IconGrid: View {
+private struct IconGridView: View {
     @Binding var selectedIcon: String
     let columnLayout: [GridItem]
     

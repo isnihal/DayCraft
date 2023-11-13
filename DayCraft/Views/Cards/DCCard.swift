@@ -11,25 +11,8 @@ struct DCCard: View {
     var body: some View {
         VStack {
             HStack(){
-                ZStack{
-                    Circle()
-                        .frame(height: 100)
-                    Image(systemName: "figure.outdoor.cycle")
-                        .scaleEffect(2.5)
-                        .foregroundStyle(.background)
-                }
-                VStack(alignment: .leading){
-                    Text("Cycling")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(.top,2)
-                    Text("Cycle through the hills. I am great at cycling")
-                        .font(.system(size: 16))
-                        .lineLimit(2)
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                }
-                .padding(.leading,4)
+                RoutineIconView()
+                RoutineNameView()
                 Spacer()
             }
             .padding()
@@ -44,4 +27,33 @@ struct DCCard: View {
 
 #Preview {
     DCCard()
+}
+
+private struct RoutineIconView: View {
+    var body: some View {
+        ZStack{
+            Circle()
+                .frame(height: 100)
+            Image(systemName: "figure.outdoor.cycle")
+                .scaleEffect(2.5)
+                .foregroundStyle(.background)
+        }
+    }
+}
+
+private struct RoutineNameView: View {
+    var body: some View {
+        VStack(alignment: .leading){
+            Text("Cycling")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.top,2)
+            Text("Cycle through the hills. I am great at cycling")
+                .font(.system(size: 16))
+                .lineLimit(2)
+                .foregroundStyle(.secondary)
+            Spacer()
+        }
+        .padding(.leading,4)
+    }
 }

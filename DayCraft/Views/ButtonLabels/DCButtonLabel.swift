@@ -13,7 +13,7 @@ struct DCButtonLabel: View {
     var body: some View {
         ZStack{
             Circle()
-                .frame(width: 60,height: 60)
+                .frame(height: 60)
                 .foregroundStyle(Color(uiColor: .label))
             Image(systemName: symbolName)
                 .imageScale(.large)

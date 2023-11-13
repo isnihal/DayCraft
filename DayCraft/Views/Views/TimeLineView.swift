@@ -11,12 +11,11 @@ struct TimeLineView: View {
     var body: some View {
         HStack(alignment: .top){
             CircleLineView()
-            VStack(alignment: .leading,spacing: 0){
+            VStack(alignment: .leading,spacing: 8){
                 Text("08:00 AM")
                     .font(.title)
                     .bold()
                     .padding(.leading,4)
-                    .padding(.bottom,8)
                     .offset(CGSize(width: 0, height: -7))
                 DCCard()
                     .padding(.trailing)
@@ -25,7 +24,11 @@ struct TimeLineView: View {
     }
 }
 
-struct CircleLineView: View {
+#Preview {
+    TimeLineView()
+}
+
+private struct CircleLineView: View {
     var body: some View {
         VStack(spacing: 0){
             Circle()
@@ -34,8 +37,4 @@ struct CircleLineView: View {
                 .frame(width: 2, height: 200)
         }
     }
-}
-
-#Preview {
-    TimeLineView()
 }

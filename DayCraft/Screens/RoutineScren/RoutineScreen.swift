@@ -13,7 +13,7 @@ struct RoutineScreen: View {
     var body: some View {
         NavigationStack{
             VStack(){
-                RoutineHeader(isShowingSheet: $isShowingSheet)
+                RoutineHeaderView(isShowingSheet: $isShowingSheet)
                 .padding()
                 Spacer().frame(height: 32)
                 List{
@@ -57,7 +57,7 @@ struct RoutineScreen: View {
             }
             .ignoresSafeArea(edges: .bottom)
             .sheet(isPresented: $isShowingSheet, content: {
-                CreateRoutineSheet(isShowingSheet: $isShowingSheet,date: .now, routineName: "", routineNotes: "",selectedIcon: "figure.boxing")
+                CreateRoutineSheet(isShowingSheet: $isShowingSheet,routineTime: .now, routineName: "", routineNotes: "",selectedIcon: "figure.boxing")
             })
         }
     }
@@ -67,7 +67,7 @@ struct RoutineScreen: View {
     RoutineScreen()
 }
 
-struct RoutineHeader: View {
+private struct RoutineHeaderView: View {
     @Binding var isShowingSheet: Bool
     
     var body: some View {
