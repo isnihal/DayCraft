@@ -23,16 +23,4 @@ class Routine{
         self.time = time
         self.days = days
     }
-    
-    static let mockRoutine = Routine(name: "Golfing", note: "Swing a club, I'm great at golf", icon: "figure.golf", time: Date(), days: [])
-}
-
-enum Weekday: Int,Codable{
-    case sunday = 1
-    case monday
-    case tuesday
-    case wednesday
-    case thursday
-    case friday
-    case saturday
 }
