@@ -10,6 +10,7 @@ import SwiftData
 
 struct RoutineScreen: View {
     @State var isShowingSheet = false
+    @Environment(\.modelContext) var context
     @Query(sort: \Routine.time) var routines: [Routine]
     
     var body: some View {
@@ -24,6 +25,11 @@ struct RoutineScreen: View {
                             .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                             .listRowSeparator(.hidden)
                     }
+                    .onDelete(perform: { indexSet in
+                        for index in indexSet{
+                            context.delete(routines[index])
+                        }
+                    })
                 }
                 .padding(.leading)
                 .listStyle(.plain)
