@@ -8,23 +8,22 @@
 import SwiftUI
 
 struct CreateRoutineSheet: View {
-    
     @Binding var isShowingSheet: Bool
     
-    @State var routineTime: Date
-    @State var routineName: String
-    @State var routineNotes: String
-    @State var selectedIcon: String
+    @State var time: Date
+    @State var name: String
+    @State var note: String
+    @State var icon: String
     
     var body: some View {
         VStack{
-            ActionButtonsView(isShowingSheet: $isShowingSheet)
+            ActionButtonsView(isShowingSheet: $isShowingSheet, name: $name, note: $note, time: $time, icon: $icon)
             RoutineDetailsView(
-                routineName: $routineName, routineNotes: $routineNotes, selectedIcon: $selectedIcon)
+                routineName: $name, routineNotes: $note, selectedIcon: $icon)
             Spacer().frame(height: 16)
-            RoutineTimePickerView(date: $routineTime)
+            RoutineTimePickerView(time: $time)
             Spacer().frame(height: 16)
-            IconContainerView(selectedIcon: $selectedIcon)
+            IconContainerView(selectedIcon: $icon)
             Spacer()
         }
         .padding()
@@ -32,11 +31,17 @@ struct CreateRoutineSheet: View {
 }
 
 #Preview {
-    CreateRoutineSheet(isShowingSheet: .constant(true),routineTime: .distantFuture, routineName: "",routineNotes: "", selectedIcon: "figure.boxing")
+    CreateRoutineSheet(isShowingSheet: .constant(true),time: .distantFuture, name: "",note: "", icon: "figure.boxing")
 }
 
 private struct ActionButtonsView: View {
+    @Environment(\.modelContext) var context
+    
     @Binding var isShowingSheet: Bool
+    @Binding var name: String
+    @Binding var note: String
+    @Binding var time: Date
+    @Binding var icon: String
     
     var body: some View {
         HStack{
@@ -48,7 +53,8 @@ private struct ActionButtonsView: View {
             })
             Spacer()
             Button(action: {
-#warning("Save routine here")
+                let routine = Routine(name: name, note: note, time: time, days: [.sunday,.monday,.tuesday,.wednesday,.thursday,.friday,.saturday])
+                context.insert(routine)
                 isShowingSheet = false
             }, label: {
                 Text("Done")
@@ -100,15 +106,15 @@ private struct RoutineDetailsView: View {
 
 private struct RoutineTimePickerView: View {
     
-    @Binding var date: Date
+    @Binding var time: Date
     
     var body: some View {
         ZStack{
             Rectangle()
-                .foregroundStyle(Color(uiColor: .label).opacity(0.1))
+                .foregroundStyle(Color(uiColor: .label).opacity(0.05))
                 .cornerRadius(8)
                 .frame(height: 60)
-            DatePicker("When", selection: $date, displayedComponents: .hourAndMinute)
+            DatePicker("When", selection: $time, displayedComponents: .hourAndMinute)
                 .fontWeight(.bold)
                 .padding(.horizontal,16)
         }

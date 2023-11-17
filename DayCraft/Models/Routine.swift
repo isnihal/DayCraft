@@ -10,13 +10,13 @@ import SwiftData
 
 @Model
 class Routine{
-    let title: String
+    let name: String
     let note: String
     let time: Date
     let days: Set<Weekday>
     
-    init(title: String, note: String, time: Date, days: Set<Weekday>) {
-        self.title = title
+    init(name: String, note: String, time: Date, days: Set<Weekday>) {
+        self.name = name
         self.note = note
         self.time = time
         self.days = days
