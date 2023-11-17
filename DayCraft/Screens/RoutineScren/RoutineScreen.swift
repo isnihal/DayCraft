@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RoutineScreen: View {
     @State var isShowingSheet = false
+    @Query(sort: \Routine.time) var routines: [Routine]
     
     var body: some View {
         NavigationStack{
@@ -17,9 +19,11 @@ struct RoutineScreen: View {
                 .padding()
                 Spacer().frame(height: 32)
                 List{
-                    TimeLineView(routine: Routine.mockRoutine)
-                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        .listRowSeparator(.hidden)
+                    ForEach(routines) { routine in
+                        TimeLineView(routine: routine)
+                            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            .listRowSeparator(.hidden)
+                    }
                 }
                 .padding(.leading)
                 .listStyle(.plain)
