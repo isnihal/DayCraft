@@ -20,7 +20,7 @@ struct TimeLineView: View {
                     .bold()
                     .padding(.leading,4)
                     .offset(CGSize(width: 0, height: -7))
-                DCCard(routine: Routine.mockRoutine)
+                DCCard(routine: routine)
                     .padding(.trailing)
             }
         }
