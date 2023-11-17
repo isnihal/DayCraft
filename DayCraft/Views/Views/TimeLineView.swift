@@ -15,7 +15,7 @@ struct TimeLineView: View {
         HStack(alignment: .top){
             CircleLineView()
             VStack(alignment: .leading,spacing: 8){
-                Text(formatTime(time: routine.time))
+                Text(routine.formattedTime)
                     .font(.title)
                     .bold()
                     .padding(.leading,4)

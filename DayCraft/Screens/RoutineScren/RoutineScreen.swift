@@ -9,14 +9,15 @@ import SwiftUI
 import SwiftData
 
 struct RoutineScreen: View {
-    @State var isShowingSheet = false
+    @State var isShowingCreateRoutineSheet = false
     @Environment(\.modelContext) var context
     @Query(sort: \Routine.time) var routines: [Routine]
+    @State var selectedRoutine: Routine?
     
     var body: some View {
         NavigationStack{
             VStack(){
-                RoutineHeaderView(isShowingSheet: $isShowingSheet)
+                RoutineHeaderView(isShowingSheet: $isShowingCreateRoutineSheet)
                 .padding()
                 Spacer().frame(height: 32)
                 List{
@@ -24,6 +25,9 @@ struct RoutineScreen: View {
                         TimeLineView(routine: routine)
                             .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                             .listRowSeparator(.hidden)
+                            .onTapGesture {
+                                selectedRoutine = routine
+                            }
                     }
                     .onDelete(perform: { indexSet in
                         for index in indexSet{
@@ -36,15 +40,18 @@ struct RoutineScreen: View {
                 Spacer()
             }
             .ignoresSafeArea(edges: .bottom)
-            .sheet(isPresented: $isShowingSheet, content: {
-                CreateRoutineSheet(isShowingSheet: $isShowingSheet,time: .now, name: "", note: "",icon: "figure.boxing")
+            .sheet(isPresented: $isShowingCreateRoutineSheet, content: {
+                CreateRoutineSheet(isShowingSheet: $isShowingCreateRoutineSheet,time: .now, name: "", note: "",icon: "figure.boxing")
+            })
+            .sheet(item: $selectedRoutine, content: { routine in
+                EdItRoutineSheet(routine: routine)
             })
         }
     }
 }
 
 #Preview {
-    RoutineScreen()
+    RoutineScreen(selectedRoutine: Routine.mockRoutine)
 }
 
 private struct RoutineHeaderView: View {
