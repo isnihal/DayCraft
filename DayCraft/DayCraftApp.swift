@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct DayCraftApp: App {
     var body: some Scene {
         WindowGroup {
             FocusScreen()
+                .modelContainer(for: Routine.self)
         }
     }
 }

@@ -20,7 +20,7 @@ struct IconContainerView: View {
     var body: some View {
         ZStack(alignment: .top){
             Rectangle()
-                .foregroundStyle(Color(uiColor: .label).opacity(0.1))
+                .foregroundStyle(Color(uiColor: .label).opacity(0.05))
                 .cornerRadius(8)
             IconGridView(selectedIcon: $selectedIcon, columnLayout: columnLayout)
         }

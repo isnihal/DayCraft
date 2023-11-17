@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct DCCard: View {
+    
+    let routine: Routine
+    
     var body: some View {
         VStack {
             HStack(){
-                RoutineIconView()
-                RoutineNameView()
+                RoutineIconView(routine: routine)
+                RoutineNameView(routine: routine)
                 Spacer()
             }
             .padding()
@@ -26,15 +29,17 @@ struct DCCard: View {
 }
 
 #Preview {
-    DCCard()
+    DCCard(routine: Routine.mockRoutine)
 }
 
 private struct RoutineIconView: View {
+    let routine: Routine
+    
     var body: some View {
         ZStack{
             Circle()
                 .frame(height: 100)
-            Image(systemName: "figure.outdoor.cycle")
+            Image(systemName: routine.icon)
                 .scaleEffect(2.5)
                 .foregroundStyle(.background)
         }
@@ -42,13 +47,15 @@ private struct RoutineIconView: View {
 }
 
 private struct RoutineNameView: View {
+    let routine: Routine
+    
     var body: some View {
         VStack(alignment: .leading){
-            Text("Cycling")
+            Text(routine.name)
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.top,2)
-            Text("Cycle through the hills. I am great at cycling")
+            Text(routine.note)
                 .font(.system(size: 16))
                 .lineLimit(2)
                 .foregroundStyle(.secondary)
