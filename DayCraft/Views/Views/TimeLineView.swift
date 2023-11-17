@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct TimeLineView: View {
+    
+    let routine: Routine
+    
     var body: some View {
         HStack(alignment: .top){
             CircleLineView()
             VStack(alignment: .leading,spacing: 8){
-                Text("08:00 AM")
+                Text(formatTime(time: routine.time))
                     .font(.title)
                     .bold()
                     .padding(.leading,4)
                     .offset(CGSize(width: 0, height: -7))
-                DCCard()
+                DCCard(routine: Routine.mockRoutine)
                     .padding(.trailing)
             }
         }
@@ -25,7 +28,7 @@ struct TimeLineView: View {
 }
 
 #Preview {
-    TimeLineView()
+    TimeLineView(routine: Routine.mockRoutine)
 }
 
 private struct CircleLineView: View {
