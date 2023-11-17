@@ -12,7 +12,7 @@ struct EdItRoutineSheet: View {
     
     var body: some View {
         VStack{
-            ActionButtonsView()
+            ActionButtonsView(routine: routine)
             RoutineDetailsView(routine: routine)
             Spacer().frame(height: 16)
             RoutineTimePickerView(routine: routine)
@@ -29,10 +29,20 @@ struct EdItRoutineSheet: View {
 }
 
 private struct ActionButtonsView: View {
+    @Bindable var routine: Routine
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var context
     
     var body: some View {
         HStack{
+            Button(action: {
+                #warning("Confirm routine delettion")
+                context.delete(routine)
+                dismiss()
+            }, label: {
+                Text("Delete")
+                    .foregroundStyle(.red)
+            })
             Spacer()
             Button(action: {
                 dismiss()
