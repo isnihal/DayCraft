@@ -6,16 +6,24 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Routine: Identifiable{
-    let id: String
+@Model
+class Routine{
     let title: String
     let note: String
     let time: Date
     let days: Set<Weekday>
+    
+    init(title: String, note: String, time: Date, days: Set<Weekday>) {
+        self.title = title
+        self.note = note
+        self.time = time
+        self.days = days
+    }
 }
 
-enum Weekday: Int{
+enum Weekday: Int,Codable{
     case sunday = 1
     case monday
     case tuesday
