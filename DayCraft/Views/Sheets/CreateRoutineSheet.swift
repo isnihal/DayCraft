@@ -53,7 +53,8 @@ private struct ActionButtonsView: View {
             })
             Spacer()
             Button(action: {
-                let routine = Routine(name: name, note: note, icon: icon, time: time, days: [.sunday,.monday,.tuesday,.wednesday,.thursday,.friday,.saturday])
+                //MARK: - Create Routine Function
+                let routine = Routine(name: name, note: note, icon: icon, time: time.normalizedDate, days: [.sunday,.monday,.tuesday,.wednesday,.thursday,.friday,.saturday])
                 context.insert(routine)
                 isShowingSheet = false
             }, label: {

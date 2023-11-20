@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct FocusScreen: View {
     var body: some View {
@@ -28,26 +29,35 @@ struct FocusScreen: View {
 }
 
 private struct FocusView: View {
+    @Query(sort: \Routine.time) var routines: [Routine]
+
+    
     var body: some View {
-        VStack(spacing:0){
-            ZStack{
-                Circle()
-                Image(systemName: "shower.handheld.fill")
-                    .resizable()
-                    .frame(width: 180, height: 180)
-                    .foregroundStyle(.background)
+        if let currentRoutine = routines.focusRoutine.currentRoutine{
+            VStack(spacing:0){
+                ZStack{
+                    Circle()
+                    Image(systemName: currentRoutine.icon)
+                        .resizable()
+                        .frame(width: 180, height: 180)
+                        .foregroundStyle(.background)
+                }
+                .padding(.horizontal,16)
+                .padding(.bottom,16)
+                Text(currentRoutine.name)
+                    .font(.system(size: 42))
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.bottom,2)
+                if let nextRoutine = routines.focusRoutine.nextRoutine{
+                    Text(nextRoutine.nextRoutineTime)
+                        .font(.system(size: 24))
+                        .fontWeight(.regular)
+                        .foregroundStyle(.secondary)
+                }
             }
-            .padding(.horizontal,16)
-            .padding(.bottom,16)
-            Text("Wake Up")
-                .font(.system(size: 42))
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom,2)
-            Text("27 Mins  |  Until 8:45")
-                .font(.system(size: 24))
-                .fontWeight(.regular)
-                .foregroundStyle(.secondary)
+        } else{
+            #warning("Create Empty View")
         }
     }
 }
