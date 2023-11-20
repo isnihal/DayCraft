@@ -10,10 +10,10 @@ import SwiftUI
 struct CreateRoutineSheet: View {
     @Binding var isShowingSheet: Bool
     
-    @State var time: Date
-    @State var name: String
-    @State var note: String
-    @State var icon: String
+    @State var time: Date = .now
+    @State var name: String = ""
+    @State var note: String = ""
+    @State var icon: String = "figure.boxing"
     
     var body: some View {
         VStack{
