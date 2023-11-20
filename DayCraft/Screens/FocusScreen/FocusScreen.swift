@@ -14,7 +14,6 @@ struct FocusScreen: View {
             VStack{
                 Spacer()
                 FocusView()
-                    .offset(CGSize(width: 0, height: -20))
                 Spacer()
                 RoutineButtonLink()
             }
@@ -56,8 +55,9 @@ private struct FocusView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            .offset(CGSize(width: 0, height: -20))
         } else{
-            #warning("Create Empty View")
+            ContentUnavailableView("No Routines Added", systemImage: "tray", description: Text("Add your routines by tapping the button below"))
         }
     }
 }
