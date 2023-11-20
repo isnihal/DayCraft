@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CreateRoutineSheet: View {
     @Binding var isShowingSheet: Bool
+    @Environment(\.modelContext) var context
+    
+    var showAsSheet: Bool = true
     
     @State var time: Date = .now
     @State var name: String = ""
@@ -17,7 +21,9 @@ struct CreateRoutineSheet: View {
     
     var body: some View {
         VStack{
-            ActionButtonsView(isShowingSheet: $isShowingSheet, name: $name, note: $note, time: $time, icon: $icon)
+            if showAsSheet{
+                ActionButtonsView(isShowingSheet: $isShowingSheet, name: $name, note: $note, time: $time, icon: $icon)
+            }
             RoutineDetailsView(
                 routineName: $name, routineNotes: $note, selectedIcon: $icon)
             Spacer().frame(height: 16)
@@ -26,12 +32,29 @@ struct CreateRoutineSheet: View {
             IconContainerView(selectedIcon: $icon)
             Spacer()
         }
+        .toolbar(content: {
+            if !showAsSheet{
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        insertRoutine(name: name, note: note, icon: icon, time: time, days: [], context: context, isShowingSheet: &isShowingSheet)
+                    }, label: {
+                        Text("Done")
+                    })
+                }
+            }
+        })
         .padding()
     }
 }
 
 #Preview {
     CreateRoutineSheet(isShowingSheet: .constant(true),time: .distantFuture, name: "",note: "", icon: "figure.boxing")
+}
+
+func insertRoutine(name: String, note: String, icon: String, time: Date, days: [Weekday], context: ModelContext, isShowingSheet: inout Bool){
+    let routine = Routine(name: name, note: note, icon: icon, time: time.normalizedDate, days: [.sunday,.monday,.tuesday,.wednesday,.thursday,.friday,.saturday])
+    context.insert(routine)
+    isShowingSheet = false
 }
 
 private struct ActionButtonsView: View {
@@ -53,10 +76,7 @@ private struct ActionButtonsView: View {
             })
             Spacer()
             Button(action: {
-                //MARK: - Create Routine Function
-                let routine = Routine(name: name, note: note, icon: icon, time: time.normalizedDate, days: [.sunday,.monday,.tuesday,.wednesday,.thursday,.friday,.saturday])
-                context.insert(routine)
-                isShowingSheet = false
+                insertRoutine(name: name, note: note, icon: icon, time: time, days: [], context: context, isShowingSheet: &isShowingSheet)
             }, label: {
                 Text("Done")
             })

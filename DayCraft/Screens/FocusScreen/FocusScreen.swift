@@ -9,13 +9,15 @@ import SwiftUI
 import SwiftData
 
 struct FocusScreen: View {
+    @Query(sort: \Routine.time) var routines: [Routine]
+    
     var body: some View {
         NavigationStack{
             VStack{
                 Spacer()
-                FocusView()
+                FocusView(routines: routines)
                 Spacer()
-                RoutineButtonLink()
+                RoutineButtonLink(routines: routines)
             }
             .padding()
         }
@@ -28,9 +30,9 @@ struct FocusScreen: View {
 }
 
 private struct FocusView: View {
-    @Query(sort: \Routine.time) var routines: [Routine]
-
     
+    var routines: [Routine]
+
     var body: some View {
         if let currentRoutine = routines.focusRoutine.currentRoutine{
             VStack(spacing:0){
@@ -63,13 +65,20 @@ private struct FocusView: View {
 }
 
 private struct RoutineButtonLink: View {
+    var routines: [Routine]
+    
     var body: some View {
         HStack{
             Spacer()
             NavigationLink {
-                RoutineScreen()
+                if !routines.isEmpty{
+                    RoutineScreen()
+                }
+                else{
+                    CreateRoutineSheet(isShowingSheet: .constant(false),showAsSheet: false)
+                }
             } label: {
-                DCButtonLabel(symbolName: "list.bullet")
+                DCButtonLabel(symbolName: routines.isEmpty ? "plus":"list.bullet")
             }
         }
     }
