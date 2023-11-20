@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct CreateRoutineSheet: View {
+struct AddRoutineSheet: View {
     @Binding var isShowingSheet: Bool
     @Environment(\.modelContext) var context
     
@@ -48,7 +48,7 @@ struct CreateRoutineSheet: View {
 }
 
 #Preview {
-    CreateRoutineSheet(isShowingSheet: .constant(true),time: .distantFuture, name: "",note: "", icon: "figure.boxing")
+    AddRoutineSheet(isShowingSheet: .constant(true),time: .distantFuture, name: "",note: "", icon: "figure.boxing")
 }
 
 func insertRoutine(name: String, note: String, icon: String, time: Date, days: [Weekday], context: ModelContext, isShowingSheet: inout Bool){

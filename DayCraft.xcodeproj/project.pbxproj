@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A00EE9052AFE9F65004A004E /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9042AFE9F65004A004E /* TimeLineView.swift */; };
-		A00EE9082AFEAD2F004A004E /* CreateRoutineSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9072AFEAD2F004A004E /* CreateRoutineSheet.swift */; };
+		A00EE9082AFEAD2F004A004E /* AddRoutineSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */; };
 		A023EB892B054DD700608572 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023EB882B054DD700608572 /* Routine.swift */; };
 		A0265B352AFF2EA400A29C25 /* IconContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0265B342AFF2EA400A29C25 /* IconContainerView.swift */; };
 		A06A5A9D2AFE610C00AD0907 /* DayCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06A5A9C2AFE610C00AD0907 /* DayCraftApp.swift */; };
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		A00EE9042AFE9F65004A004E /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
-		A00EE9072AFEAD2F004A004E /* CreateRoutineSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineSheet.swift; sourceTree = "<group>"; };
+		A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineSheet.swift; sourceTree = "<group>"; };
 		A023EB882B054DD700608572 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		A0265B342AFF2EA400A29C25 /* IconContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconContainerView.swift; sourceTree = "<group>"; };
 		A06A5A992AFE610C00AD0907 /* DayCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,7 @@
 		A00EE9062AFEAD19004A004E /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
-				A00EE9072AFEAD2F004A004E /* CreateRoutineSheet.swift */,
+				A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */,
 				A0ECB3AD2B075ABF007E343E /* EditRoutineSheet.swift */,
 			);
 			path = Sheets;
@@ -266,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A00EE9082AFEAD2F004A004E /* CreateRoutineSheet.swift in Sources */,
+				A00EE9082AFEAD2F004A004E /* AddRoutineSheet.swift in Sources */,
 				A06A5A9F2AFE610C00AD0907 /* FocusScreen.swift in Sources */,
 				A0ECB3B62B07C63B007E343E /* Date+Ext.swift in Sources */,
 				A0ECB3AE2B075ABF007E343E /* EditRoutineSheet.swift in Sources */,

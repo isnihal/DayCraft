@@ -23,7 +23,7 @@ struct RoutineScreen: View {
             }
             .ignoresSafeArea(edges: .bottom)
             .sheet(isPresented: $isShowingCreateRoutineSheet, content: {
-                CreateRoutineSheet(isShowingSheet: $isShowingCreateRoutineSheet)
+                AddRoutineSheet(isShowingSheet: $isShowingCreateRoutineSheet)
             })
             .sheet(item: $selectedRoutine, content: { routine in
                 EdItRoutineSheet(routine: routine)
