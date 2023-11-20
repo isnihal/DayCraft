@@ -26,7 +26,7 @@ extension Routine{
         }else{
             timeDifferenceInMinutes = timeDifference
         }
-        return "\(timeDifferenceInMinutes) Mins | Until \(self.formattedTime)"
+        return "\(timeDifferenceInMinutes) mins left | Until \(self.formattedTime)"
     }
 }
 
