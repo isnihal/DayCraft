@@ -32,7 +32,8 @@ struct FocusScreen: View {
 private struct FocusView: View {
     
     var routines: [Routine]
-
+    var viewModel = FocusScreenViewModel()
+    
     var body: some View {
         if let currentRoutine = routines.focusRoutine.currentRoutine{
             VStack(spacing:0){

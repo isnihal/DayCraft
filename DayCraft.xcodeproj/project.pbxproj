@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00024602B0C7E3500925BFD /* FocusScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000245F2B0C7E3500925BFD /* FocusScreenViewModel.swift */; };
 		A00EE9052AFE9F65004A004E /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9042AFE9F65004A004E /* TimeLineView.swift */; };
 		A00EE9082AFEAD2F004A004E /* AddRoutineSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */; };
 		A023EB892B054DD700608572 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023EB882B054DD700608572 /* Routine.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A000245F2B0C7E3500925BFD /* FocusScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusScreenViewModel.swift; sourceTree = "<group>"; };
 		A00EE9042AFE9F65004A004E /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineSheet.swift; sourceTree = "<group>"; };
 		A023EB882B054DD700608572 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				A06A5A9E2AFE610C00AD0907 /* FocusScreen.swift */,
+				A000245F2B0C7E3500925BFD /* FocusScreenViewModel.swift */,
 			);
 			path = FocusScreen;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				A08A695F2AFE991000F26990 /* DCCard.swift in Sources */,
 				A0ECB3B02B0770E1007E343E /* Routine+Ext.swift in Sources */,
 				A023EB892B054DD700608572 /* Routine.swift in Sources */,
+				A00024602B0C7E3500925BFD /* FocusScreenViewModel.swift in Sources */,
 				A0265B352AFF2EA400A29C25 /* IconContainerView.swift in Sources */,
 				A08A69532AFE85BB00F26990 /* RoutineScreen.swift in Sources */,
 				A0ECB3B42B07715D007E343E /* Enums.swift in Sources */,
