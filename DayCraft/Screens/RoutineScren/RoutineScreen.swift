@@ -26,7 +26,7 @@ struct RoutineScreen: View {
                 AddRoutineSheet(isShowingSheet: $isShowingCreateRoutineSheet)
             })
             .sheet(item: $selectedRoutine, content: { routine in
-                EdItRoutineSheet(routine: routine)
+                EdItRoutineSheet(routine: routine, routineName: routine.name)
             })
         }
     }
