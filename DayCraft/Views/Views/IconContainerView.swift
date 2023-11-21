@@ -22,7 +22,7 @@ struct IconContainerView: View {
             Rectangle()
                 .foregroundStyle(Color(uiColor: .label).opacity(0.05))
                 .cornerRadius(8)
-            IconGridView(selectedIcon: $selectedIcon, columnLayout: columnLayout)
+            IconGridView(selectedIcon: $selectedIcon, icons: K.icons, columnLayout: columnLayout)
         }
     }
 }
@@ -33,15 +33,15 @@ struct IconContainerView: View {
 
 private struct IconGridView: View {
     @Binding var selectedIcon: String
+    
+    let icons: [String]
     let columnLayout: [GridItem]
     
     var body: some View {
         LazyVGrid(columns: columnLayout,spacing: 24,content: {
-            IconItem(iconImage: "figure.boxing", selectedIcon: $selectedIcon)
-            IconItem(iconImage: "circle.hexagongrid.circle.fill", selectedIcon: $selectedIcon)
-            IconItem(iconImage: "sun.haze.fill", selectedIcon: $selectedIcon)
-            IconItem(iconImage: "cloud.snow", selectedIcon: $selectedIcon)
-            IconItem(iconImage: "cloud.rain", selectedIcon: $selectedIcon)
+            ForEach(icons, id: \.self) { icon in
+                IconItem(iconImage: icon, selectedIcon: $selectedIcon)
+            }
         })
         .padding(.horizontal)
         .padding(.vertical,24)
