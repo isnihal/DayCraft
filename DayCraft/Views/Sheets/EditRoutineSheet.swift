@@ -57,6 +57,7 @@ private struct ActionButtonsView: View {
 
 private struct RoutineDetailsView: View {
     @Bindable var routine: Routine
+    @FocusState private var focusState: TextFocusState?
     
     var body: some View {
         HStack(alignment: .top){
@@ -77,6 +78,10 @@ private struct RoutineDetailsView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .focused($focusState, equals: .name)
+                    .onSubmit {
+                        focusState = .note
+                    }
                 Spacer().frame(height: 12)
                 TextField("Notes", text: $routine.note)
                     .multilineTextAlignment(.leading)
@@ -87,6 +92,10 @@ private struct RoutineDetailsView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .focused($focusState, equals: .note)
+                    .onSubmit {
+                        focusState = nil
+                    }
             }
         }
     }

@@ -80,6 +80,7 @@ private struct ActionButtonsView: View {
             }, label: {
                 Text("Done")
             })
+            .disabled(name.isEmpty)
         }
         .padding(.top,16)
         .padding(.bottom,32)
@@ -90,6 +91,8 @@ private struct RoutineDetailsView: View {
     @Binding var routineName: String
     @Binding var routineNotes: String
     @Binding var selectedIcon: String
+    
+    @FocusState private var focusState: TextFocusState?
     
     var body: some View {
         HStack(alignment: .top){
@@ -110,6 +113,11 @@ private struct RoutineDetailsView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .focused($focusState, equals: .name)
+                    .submitLabel(.next)
+                    .onSubmit {
+                        focusState = .note
+                    }
                 Spacer().frame(height: 12)
                 TextField("Notes", text: $routineNotes)
                     .multilineTextAlignment(.leading)
@@ -120,7 +128,18 @@ private struct RoutineDetailsView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .onTapGesture {
+                        focusState = .note
+                    }
+                    .focused($focusState, equals: .note)
+                    .submitLabel(.done)
+                    .onSubmit {
+                        focusState = nil
+                    }
             }
+        }
+        .onAppear{
+            focusState = .name
         }
     }
 }
