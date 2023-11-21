@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A00024602B0C7E3500925BFD /* FocusScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000245F2B0C7E3500925BFD /* FocusScreenViewModel.swift */; };
+		A00024632B0CAFCC00925BFD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00024622B0CAFCC00925BFD /* K.swift */; };
 		A00EE9052AFE9F65004A004E /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9042AFE9F65004A004E /* TimeLineView.swift */; };
 		A00EE9082AFEAD2F004A004E /* AddRoutineSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */; };
 		A023EB892B054DD700608572 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023EB882B054DD700608572 /* Routine.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		A000245F2B0C7E3500925BFD /* FocusScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusScreenViewModel.swift; sourceTree = "<group>"; };
+		A00024622B0CAFCC00925BFD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		A00EE9042AFE9F65004A004E /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineSheet.swift; sourceTree = "<group>"; };
 		A023EB882B054DD700608572 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A00024612B0CAFBF00925BFD /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A00024622B0CAFCC00925BFD /* K.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A00EE9032AFE9F45004A004E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 		A0ECB3AA2B07429A007E343E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A00024612B0CAFBF00925BFD /* Constants */,
 				A0ECB3B22B07714F007E343E /* Enums */,
 				A0ECB3B12B077121007E343E /* Extensions */,
 			);
@@ -275,6 +286,7 @@
 				A0ECB3AE2B075ABF007E343E /* EditRoutineSheet.swift in Sources */,
 				A00EE9052AFE9F65004A004E /* TimeLineView.swift in Sources */,
 				A08A695C2AFE987100F26990 /* DCButtonLabel.swift in Sources */,
+				A00024632B0CAFCC00925BFD /* K.swift in Sources */,
 				A08A695F2AFE991000F26990 /* DCCard.swift in Sources */,
 				A0ECB3B02B0770E1007E343E /* Routine+Ext.swift in Sources */,
 				A023EB892B054DD700608572 /* Routine.swift in Sources */,

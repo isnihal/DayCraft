@@ -17,7 +17,7 @@ struct AddRoutineSheet: View {
     @State var time: Date = .now
     @State var name: String = ""
     @State var note: String = ""
-    @State var icon: String = "figure.boxing"
+    @State var icon: String = K.icons.first!
     
     var body: some View {
         VStack{
@@ -48,7 +48,7 @@ struct AddRoutineSheet: View {
 }
 
 #Preview {
-    AddRoutineSheet(isShowingSheet: .constant(true),time: .distantFuture, name: "",note: "", icon: "figure.boxing")
+    AddRoutineSheet(isShowingSheet: .constant(true),time: .distantFuture, name: "",note: "", icon: K.icons.first!)
 }
 
 func insertRoutine(name: String, note: String, icon: String, time: Date, days: [Weekday], context: ModelContext, isShowingSheet: inout Bool){
