@@ -91,6 +91,8 @@ private struct RoutineDetailsView: View {
     @Binding var routineNotes: String
     @Binding var selectedIcon: String
     
+    @FocusState private var focusState: TextFocusState?
+    
     var body: some View {
         HStack(alignment: .top){
             ZStack{
@@ -110,6 +112,11 @@ private struct RoutineDetailsView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .focused($focusState, equals: .name)
+                    .submitLabel(.next)
+                    .onSubmit {
+                        focusState = .note
+                    }
                 Spacer().frame(height: 12)
                 TextField("Notes", text: $routineNotes)
                     .multilineTextAlignment(.leading)
@@ -120,6 +127,11 @@ private struct RoutineDetailsView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .focused($focusState, equals: .note)
+                    .submitLabel(.done)
+                    .onSubmit {
+                        focusState = nil
+                    }
             }
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Weekday: Int,Codable{
     case sunday = 1
@@ -15,4 +16,9 @@ enum Weekday: Int,Codable{
     case thursday
     case friday
     case saturday
+}
+
+enum TextFocusState{
+    case name
+    case note
 }
