@@ -29,9 +29,7 @@ struct AddRoutineSheet: View {
             Spacer().frame(height: 16)
             RoutineTimePickerView(time: $time)
             Spacer().frame(height: 16)
-            ScrollView{
-                IconContainerView(selectedIcon: $icon)
-            }
+            IconContainerView(selectedIcon: $icon)
             Spacer()
         }
         .toolbar(content: {
