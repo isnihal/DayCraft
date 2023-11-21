@@ -127,12 +127,18 @@ private struct RoutineDetailsView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .onTapGesture {
+                        focusState = .note
+                    }
                     .focused($focusState, equals: .note)
                     .submitLabel(.done)
                     .onSubmit {
                         focusState = nil
                     }
             }
+        }
+        .onAppear{
+            focusState = .name
         }
     }
 }
