@@ -47,6 +47,18 @@ struct K{
         "moon.fill",
         "bed.double.fill",
         "pill.fill",
+        "circle.fill",
+        "square.fill",
+        "app.fill",
+        "rectangle.fill",
+        "triangle.fill",
+        "diamond.fill",
+        "pentagon.fill",
+        "octagon.fill",
+        "seal.fill",
+        "rhombus.fill",
+        "shield.fill",
+        "button.angledbottom.horizontal.left.fill",
         "figure.strengthtraining.traditional",
         "figure.yoga",
         "figure.mixed.cardio",
@@ -80,9 +92,7 @@ struct K{
         "tennis.racket",
         "cricket.ball.fill",
         "volleyball.fill",
-        "hockey.puck.fill",
         "gym.bag.fill",
-        "surfboard.fill",
         "tennisball.fill"
     ]
 }
