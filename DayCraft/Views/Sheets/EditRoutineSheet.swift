@@ -9,11 +9,12 @@ import SwiftUI
 
 struct EdItRoutineSheet: View {
     @Bindable var routine: Routine
+    @State var routineName: String
     
     var body: some View {
         VStack{
-            ActionButtonsView(routine: routine)
-            RoutineDetailsView(routine: routine)
+            ActionButtonsView(routine: routine, routineName: $routineName)
+            RoutineDetailsView(routine: routine, routineName: $routineName)
             Spacer().frame(height: 16)
             RoutineTimePickerView(routine: routine)
             Spacer().frame(height: 16)
@@ -25,11 +26,12 @@ struct EdItRoutineSheet: View {
 }
 
 #Preview {
-    EdItRoutineSheet(routine: Routine.mockRoutine)
+    EdItRoutineSheet(routine: Routine.mockRoutine, routineName: Routine.mockRoutine.name)
 }
 
 private struct ActionButtonsView: View {
     @Bindable var routine: Routine
+    @Binding var routineName: String
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
     
@@ -45,10 +47,14 @@ private struct ActionButtonsView: View {
             })
             Spacer()
             Button(action: {
+                if !routineName.isEmpty{
+                    routine.name = routineName
+                }
                 dismiss()
             }, label: {
                 Text("Done")
             })
+            .disabled(routineName.isEmpty)
         }
         .padding(.top,16)
         .padding(.bottom,32)
@@ -58,6 +64,8 @@ private struct ActionButtonsView: View {
 private struct RoutineDetailsView: View {
     @Bindable var routine: Routine
     @FocusState private var focusState: TextFocusState?
+
+    @Binding var routineName: String
     
     var body: some View {
         HStack(alignment: .top){
@@ -65,12 +73,18 @@ private struct RoutineDetailsView: View {
                 Circle()
                     .frame(height: 100)
                 Image(systemName: routine.icon)
+                    .aspectRatio(contentMode: .fit)
                     .scaleEffect(2.5)
                     .foregroundStyle(.background)
             }
             Spacer().frame(width: 12)
             VStack{
-                TextField("Routine Name", text: $routine.name)
+                TextField("Routine Name", text: $routineName)
+                    .onChange(of: routineName, {
+                        if !routineName.isEmpty{
+                            routine.name = routineName
+                        }
+                    })
                     .font(.title2)
                     .fontWeight(.bold)
                     .padding(8)

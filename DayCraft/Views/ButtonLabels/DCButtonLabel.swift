@@ -16,7 +16,8 @@ struct DCButtonLabel: View {
                 .frame(height: 60)
                 .foregroundStyle(Color(uiColor: .label))
             Image(systemName: symbolName)
-                .imageScale(.large)
+                .aspectRatio(contentMode: .fit)
+                .scaleEffect(1.5)
                 .foregroundStyle(.background)
         }
     }

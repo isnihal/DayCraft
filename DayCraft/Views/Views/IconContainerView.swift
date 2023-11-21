@@ -60,6 +60,7 @@ struct IconItem: View {
                 .frame(width: 60)
                 .foregroundStyle(Color(uiColor: .label).opacity(0.1))
             Image(systemName: iconImage)
+                .aspectRatio(contentMode: .fit)
                 .scaleEffect(1.75)
         }
         .onTapGesture {
