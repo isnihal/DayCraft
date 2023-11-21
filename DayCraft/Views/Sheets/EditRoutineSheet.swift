@@ -43,7 +43,7 @@ private struct ActionButtonsView: View {
             }, label: {
                 Text("Delete")
             })
-            .confirmationDialog("Are you sure you want to delete this?", isPresented: $presentConfirmDialog) {
+            .confirmationDialog("Delete Routine", isPresented: $presentConfirmDialog) {
                 Button(role: .destructive,action: {
                     context.delete(routine)
                     dismiss()

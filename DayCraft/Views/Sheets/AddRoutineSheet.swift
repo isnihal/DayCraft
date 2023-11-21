@@ -66,11 +66,15 @@ private struct ActionButtonsView: View {
     @Binding var time: Date
     @Binding var icon: String
     
+    @State var presentConfirmDialog = false
+    
     var body: some View {
         HStack{
             Button(action: {
-#warning("Check if changes should be discarded")
-                isShowingSheet = false
+                presentConfirmDialog = !name.isEmpty || !note.isEmpty
+                if !presentConfirmDialog{
+                    isShowingSheet = false
+                }
             }, label: {
                 Text("Cancel")
             })
@@ -84,6 +88,13 @@ private struct ActionButtonsView: View {
         }
         .padding(.top,16)
         .padding(.bottom,32)
+        .confirmationDialog("Discard Changes", isPresented: $presentConfirmDialog) {
+            Button(role: .destructive,action: {
+                isShowingSheet = false
+            }, label: {
+                Text("Discard Changes")
+            })
+        }
     }
 }
 
