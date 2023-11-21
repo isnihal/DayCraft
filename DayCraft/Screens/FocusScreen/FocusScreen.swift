@@ -53,9 +53,11 @@ private struct FocusView: View {
                     .font(.system(size: 42))
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .lineLimit(1)
                     .padding(.bottom,2)
                 if let nextRoutine = routines.focusRoutine.nextRoutine{
                     Text(nextRoutine.nextRoutineTime)
+                        .lineLimit(2)
                         .font(.system(size: 24))
                         .fontWeight(.regular)
                         .foregroundStyle(.secondary)
