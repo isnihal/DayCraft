@@ -34,17 +34,23 @@ private struct ActionButtonsView: View {
     @Binding var routineName: String
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
+    @State var presentConfirmDialog = false
     
     var body: some View {
         HStack{
-            Button(action: {
-                #warning("Confirm routine delettion")
-                context.delete(routine)
-                dismiss()
+            Button(role: .destructive,action: {
+                presentConfirmDialog = true
             }, label: {
                 Text("Delete")
-                    .foregroundStyle(.red)
             })
+            .confirmationDialog("Are you sure you want to delete this?", isPresented: $presentConfirmDialog) {
+                Button(role: .destructive,action: {
+                    context.delete(routine)
+                    dismiss()
+                }, label: {
+                    Text("Delete Routine")
+                })
+            }
             Spacer()
             Button(action: {
                 if !routineName.isEmpty{
@@ -64,7 +70,7 @@ private struct ActionButtonsView: View {
 private struct RoutineDetailsView: View {
     @Bindable var routine: Routine
     @FocusState private var focusState: TextFocusState?
-
+    
     @Binding var routineName: String
     
     var body: some View {
