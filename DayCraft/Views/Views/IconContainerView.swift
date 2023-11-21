@@ -28,7 +28,7 @@ struct IconContainerView: View {
 }
 
 #Preview {
-    IconContainerView(selectedIcon: .constant("figure.boxing"))
+    IconContainerView(selectedIcon: .constant(K.icons.first!))
 }
 
 private struct IconGridView: View {
