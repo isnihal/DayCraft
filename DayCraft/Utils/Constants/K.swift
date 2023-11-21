@@ -22,6 +22,8 @@ struct K{
         "cup.and.saucer.fill",
         "waterbottle.fill",
         "briefcase.fill",
+        "macbook",
+        "phone.fill",
         "car.side.fill",
         "bus",
         "airplane",
@@ -33,6 +35,9 @@ struct K{
         "sunset.fill",
         "book.fill",
         "bolt.fill",
+        "cart.fill",
+        "cat.fill",
+        "dog.fill",
         "tray.fill",
         "wineglass.fill",
         "tv.fill",
@@ -71,5 +76,8 @@ struct K{
         "basketball.fill",
         "soccerball",
         "baseball.fill",
+        "tennis.racket",
+        "cricket.ball.fill",
+        "volleyball.fill"
     ]
 }
