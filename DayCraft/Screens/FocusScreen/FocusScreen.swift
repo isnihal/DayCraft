@@ -43,6 +43,7 @@ private struct FocusView: View {
                         .foregroundStyle(.clear)
                     Image(systemName: currentRoutine.icon)
                         .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 180, height: 180)
                         .foregroundStyle(.background)
                 }

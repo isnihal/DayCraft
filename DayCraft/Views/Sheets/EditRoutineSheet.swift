@@ -65,6 +65,7 @@ private struct RoutineDetailsView: View {
                 Circle()
                     .frame(height: 100)
                 Image(systemName: routine.icon)
+                    .aspectRatio(contentMode: .fit)
                     .scaleEffect(2.5)
                     .foregroundStyle(.background)
             }
