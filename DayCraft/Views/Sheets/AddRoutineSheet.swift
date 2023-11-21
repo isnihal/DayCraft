@@ -80,6 +80,7 @@ private struct ActionButtonsView: View {
             }, label: {
                 Text("Done")
             })
+            .disabled(name.isEmpty)
         }
         .padding(.top,16)
         .padding(.bottom,32)
