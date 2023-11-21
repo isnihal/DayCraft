@@ -32,12 +32,15 @@ struct FocusScreen: View {
 private struct FocusView: View {
     
     var routines: [Routine]
-
+    var viewModel = FocusScreenViewModel()
+    
     var body: some View {
         if let currentRoutine = routines.focusRoutine.currentRoutine{
             VStack(spacing:0){
                 ZStack{
                     Circle()
+                    Text(viewModel.updateTimeStamp.description)
+                        .foregroundStyle(.clear)
                     Image(systemName: currentRoutine.icon)
                         .resizable()
                         .frame(width: 180, height: 180)
