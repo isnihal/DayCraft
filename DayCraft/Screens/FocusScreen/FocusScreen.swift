@@ -39,6 +39,8 @@ private struct FocusView: View {
             VStack(spacing:0){
                 ZStack{
                     Circle()
+                    Text(viewModel.updateTimeStamp.description)
+                        .foregroundStyle(.clear)
                     Image(systemName: currentRoutine.icon)
                         .resizable()
                         .frame(width: 180, height: 180)

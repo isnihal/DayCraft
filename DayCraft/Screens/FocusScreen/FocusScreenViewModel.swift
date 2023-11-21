@@ -9,20 +9,34 @@ import SwiftUI
 
 @Observable class FocusScreenViewModel{
     var updateTimeStamp = Date()
-    var timer: Timer?
+    private var initialTimer: Timer?
+    private var minuteTimer: Timer?
     
-    init() {
-        startTimer()
+    private var secondsFrom60: Int{
+        60 - Calendar.current.component(.second, from: .now)
     }
     
-    func startTimer(){
-        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+    init() {
+        startInitialTimer()
+    }
+    
+    func startInitialTimer(){
+        initialTimer = Timer.scheduledTimer(withTimeInterval: TimeInterval(secondsFrom60), repeats: false, block: { _ in
+            self.updateTimeStamp = Date()
+            self.startMinuteTimer()
+        })
+    }
+    
+    private func startMinuteTimer(){
+        minuteTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
             self.updateTimeStamp = Date()
         }
     }
     
     deinit{
-        timer?.invalidate()
-        timer = nil
+        initialTimer?.invalidate()
+        minuteTimer?.invalidate()
+        minuteTimer = nil
+        initialTimer = nil
     }
 }
