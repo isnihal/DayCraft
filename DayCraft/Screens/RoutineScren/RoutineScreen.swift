@@ -16,7 +16,7 @@ struct RoutineScreen: View {
         NavigationStack{
             VStack(){
                 RoutineHeaderView(isShowingSheet: $isShowingCreateRoutineSheet)
-                .padding()
+                    .padding()
                 Spacer().frame(height: 32)
                 RoutineListView(selectedRoutine: $selectedRoutine)
                 Spacer()
@@ -61,23 +61,31 @@ struct RoutineListView: View {
     
     var body: some View {
         if !routines.isEmpty{
-            List{
-                ForEach(routines) { routine in
-                    TimeLineView(routine: routine)
-                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        .listRowSeparator(.hidden)
-                        .onTapGesture {
-                            selectedRoutine = routine
-                        }
-                }
-                .onDelete(perform: { indexSet in
-                    for index in indexSet{
-                        context.delete(routines[index])
+            ScrollViewReader{ proxy in
+                List{
+                    ForEach(routines) { routine in
+                        TimeLineView(routine: routine)
+                            .id(routines.firstIndex(of: routine)!)
+                            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            .listRowSeparator(.hidden)
+                            .onTapGesture {
+                                selectedRoutine = routine
+                            }
                     }
-                })
+                    .onDelete(perform: { indexSet in
+                        for index in indexSet{
+                            context.delete(routines[index])
+                        }
+                    })
+                }
+                .padding(.leading)
+                .listStyle(.plain)
+                .onAppear{
+                    if let currentRoutine = routines.focusRoutine.currentRoutine{
+                        proxy.scrollTo(routines.firstIndex(of: currentRoutine),anchor: .top)
+                    }
+                }
             }
-            .padding(.leading)
-            .listStyle(.plain)
         }else{
             ContentUnavailableView("No Routines Added", systemImage: "tray", description: Text("Add your routines by tapping the button above"))
                 .offset(CGSize(width: 0, height: -75.0))
