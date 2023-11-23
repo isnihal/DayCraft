@@ -16,7 +16,7 @@ class Routine{
     var time: Date
     var days: Set<Weekday>
     
-    init(name: String, note: String, icon: String, time: Date, days: Set<Weekday>) {
+    init(name: String = "", note: String = "", icon: String = "", time: Date = .now, days: Set<Weekday> = []) {
         self.name = name
         self.note = note
         self.icon = icon
