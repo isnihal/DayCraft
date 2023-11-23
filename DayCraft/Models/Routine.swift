@@ -10,13 +10,13 @@ import SwiftData
 
 @Model
 class Routine{
-    var name: String
-    var note: String
-    var icon: String
-    var time: Date
-    var days: Set<Weekday>
+    var name: String = ""
+    var note: String = ""
+    var icon: String = ""
+    var time: Date = Date()
+    var days: Set<Weekday>?
     
-    init(name: String = "", note: String = "", icon: String = "", time: Date = .now, days: Set<Weekday> = []) {
+    init(name: String, note: String, icon: String, time: Date, days: Set<Weekday>) {
         self.name = name
         self.note = note
         self.icon = icon
