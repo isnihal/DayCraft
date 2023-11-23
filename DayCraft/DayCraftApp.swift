@@ -10,10 +10,21 @@ import SwiftData
 
 @main
 struct DayCraftApp: App {
+    
+    let modelContainer: ModelContainer
+    
+    init() {
+        do {
+            modelContainer = try ModelContainer(for: Routine.self)
+        } catch {
+            fatalError("Could not initialize ModelContainer")
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             FocusScreen()
-                .modelContainer(for: Routine.self)
+                .modelContainer(modelContainer)
         }
     }
 }

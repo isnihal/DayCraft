@@ -20,6 +20,7 @@
 		A08A69532AFE85BB00F26990 /* RoutineScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A69522AFE85BB00F26990 /* RoutineScreen.swift */; };
 		A08A695C2AFE987100F26990 /* DCButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A695B2AFE987100F26990 /* DCButtonLabel.swift */; };
 		A08A695F2AFE991000F26990 /* DCCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A695E2AFE991000F26990 /* DCCard.swift */; };
+		A08E381A2B0F86B3005B0D2D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08E38122B0F85CB005B0D2D /* CloudKit.framework */; };
 		A0ECB3AE2B075ABF007E343E /* EditRoutineSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECB3AD2B075ABF007E343E /* EditRoutineSheet.swift */; };
 		A0ECB3B02B0770E1007E343E /* Routine+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECB3AF2B0770E1007E343E /* Routine+Ext.swift */; };
 		A0ECB3B42B07715D007E343E /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECB3B32B07715D007E343E /* Enums.swift */; };
@@ -41,6 +42,9 @@
 		A08A69522AFE85BB00F26990 /* RoutineScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineScreen.swift; sourceTree = "<group>"; };
 		A08A695B2AFE987100F26990 /* DCButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCButtonLabel.swift; sourceTree = "<group>"; };
 		A08A695E2AFE991000F26990 /* DCCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCCard.swift; sourceTree = "<group>"; };
+		A08E380F2B0F81F7005B0D2D /* DayCraft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DayCraft.entitlements; sourceTree = "<group>"; };
+		A08E38102B0F8237005B0D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A08E38122B0F85CB005B0D2D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		A0ECB3AD2B075ABF007E343E /* EditRoutineSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRoutineSheet.swift; sourceTree = "<group>"; };
 		A0ECB3AF2B0770E1007E343E /* Routine+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routine+Ext.swift"; sourceTree = "<group>"; };
 		A0ECB3B32B07715D007E343E /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08E381A2B0F86B3005B0D2D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,7 @@
 			children = (
 				A06A5A9B2AFE610C00AD0907 /* DayCraft */,
 				A06A5A9A2AFE610C00AD0907 /* Products */,
+				A08E38112B0F85CB005B0D2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +117,8 @@
 		A06A5A9B2AFE610C00AD0907 /* DayCraft */ = {
 			isa = PBXGroup;
 			children = (
+				A08E38102B0F8237005B0D2D /* Info.plist */,
+				A08E380F2B0F81F7005B0D2D /* DayCraft.entitlements */,
 				A023EB872B054DC800608572 /* Models */,
 				A08A69582AFE984400F26990 /* Screens */,
 				A08A69592AFE984D00F26990 /* Views */,
@@ -181,6 +189,14 @@
 				A08A69522AFE85BB00F26990 /* RoutineScreen.swift */,
 			);
 			path = RoutineScren;
+			sourceTree = "<group>";
+		};
+		A08E38112B0F85CB005B0D2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A08E38122B0F85CB005B0D2D /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A0ECB3AA2B07429A007E343E /* Utils */ = {
@@ -425,12 +441,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DayCraft/DayCraft.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DayCraft/Preview Content\"";
 				DEVELOPMENT_TEAM = 255Q572H86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DayCraft/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -455,12 +473,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DayCraft/DayCraft.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DayCraft/Preview Content\"";
 				DEVELOPMENT_TEAM = 255Q572H86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DayCraft/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
