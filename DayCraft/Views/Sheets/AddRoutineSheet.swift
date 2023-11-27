@@ -40,6 +40,7 @@ struct AddRoutineSheet: View {
                     }, label: {
                         Text("Done")
                     })
+                    .disabled(name.isEmpty)
                 }
             }
         })
