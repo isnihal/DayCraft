@@ -3,6 +3,24 @@
   "strings" : {
     "Add your routines by tapping the button above" : {
       "localizations" : {
+        "de" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Fügen Sie Ihre Routinen hinzu, indem Sie auf die Schaltfläche oben klicken."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Fügen Sie Ihre Routinen hinzu, indem Sie auf die Schaltfläche oben tippen."
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "variations" : {
             "device" : {
@@ -61,6 +79,24 @@
     },
     "Add your routines by tapping the button below" : {
       "localizations" : {
+        "de" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Fügen Sie Ihre Routinen hinzu, indem Sie auf die Schaltfläche unten klicken."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Fügen Sie Ihre Routinen hinzu, indem Sie auf die Schaltfläche unten tippen."
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "variations" : {
             "device" : {
@@ -119,6 +155,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -135,6 +177,12 @@
     },
     "Delete" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -151,6 +199,12 @@
     },
     "Delete Routine" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Routinen löschen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -167,6 +221,12 @@
     },
     "Discard Changes" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Änderungen verwerfen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -183,6 +243,12 @@
     },
     "Done" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -199,6 +265,12 @@
     },
     "No Routines Added" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Routinen hinzugefügt"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -215,6 +287,12 @@
     },
     "Notes" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notizen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -231,6 +309,12 @@
     },
     "Routine Name" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Routinenname"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -247,6 +331,12 @@
     },
     "When" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wann"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -263,6 +353,12 @@
     },
     "Your\nRoutines" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihre\nRoutinen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
