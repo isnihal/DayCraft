@@ -26,8 +26,8 @@
             "device" : {
               "mac" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
-                  "value" : ""
+                  "state" : "translated",
+                  "value" : "Agregar tus rutinas haciendo clic en el botón de arriba"
                 }
               },
               "other" : {
@@ -66,14 +66,14 @@
             "device" : {
               "mac" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
-                  "value" : "Add your routines by clicking the button below"
+                  "state" : "translated",
+                  "value" : "Agregar tus rutinas haciendo clic en el botón de abajo"
                 }
               },
               "other" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "Agregar tus rutinas tocando el botón de arriba"
+                  "value" : "Agregar tus rutinas tocando el botón de abajo"
                 }
               }
             }
