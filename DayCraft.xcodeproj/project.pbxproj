@@ -274,6 +274,7 @@
 				de,
 				es,
 				vi,
+				ar,
 			);
 			mainGroup = A06A5A902AFE610C00AD0907;
 			productRefGroup = A06A5A9A2AFE610C00AD0907 /* Products */;

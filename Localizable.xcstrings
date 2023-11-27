@@ -3,6 +3,24 @@
   "strings" : {
     "Add your routines by tapping the button above" : {
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "أضف روتيناتك بالنقر على الزر أعلاه"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "أضف روتيناتك عن طريق الضغط على الزر أعلاه"
+                }
+              }
+            }
+          }
+        },
         "de" : {
           "variations" : {
             "device" : {
@@ -79,6 +97,24 @@
     },
     "Add your routines by tapping the button below" : {
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "أضف روتيناتك بالنقر على الزر أدناه"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "أضف روتيناتك عن طريق الضغط على الزر أعلاه"
+                }
+              }
+            }
+          }
+        },
         "de" : {
           "variations" : {
             "device" : {
@@ -155,6 +191,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إلغاء"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -177,6 +219,12 @@
     },
     "Delete" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -199,6 +247,12 @@
     },
     "Delete Routine" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف الروتين"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -221,6 +275,12 @@
     },
     "Discard Changes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تجاهل التغييرات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -243,6 +303,12 @@
     },
     "Done" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -265,6 +331,12 @@
     },
     "No Routines Added" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يتم إضافة أي روتينات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -287,6 +359,12 @@
     },
     "Notes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملاحظات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -309,6 +387,12 @@
     },
     "Routine Name" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسم الروتين"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -331,6 +415,12 @@
     },
     "When" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متى"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -353,6 +443,12 @@
     },
     "Your\nRoutines" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روتيناتك"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
