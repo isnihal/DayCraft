@@ -2,10 +2,48 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Add your routines by tapping the button above" : {
-
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Add your routines by clicking the button above"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "Add your routines by tapping the button above"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Add your routines by tapping the button below" : {
-
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Add your routines by clicking the button below"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "Add your routines by tapping the button below"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Cancel" : {
 
