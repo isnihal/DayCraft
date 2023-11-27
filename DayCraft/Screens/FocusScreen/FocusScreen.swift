@@ -41,7 +41,7 @@ private struct FocusView: View {
             VStack(spacing:0){
                 ZStack{
                     Circle()
-                        .frame(maxWidth: 500, maxHeight: 500)
+                        .frame(maxWidth: 500)
                     Text(viewModel.updateTimeStamp.description)
                         .foregroundStyle(.clear)
                     Image(systemName: currentRoutine.icon)
