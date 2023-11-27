@@ -38,6 +38,24 @@
               }
             }
           }
+        },
+        "vi" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thêm các thói quen của bạn bằng cách nhấn vào nút ở phía trên"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thêm các thói quen của bạn bằng cách nhấn vào nút ở phía trên"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -78,6 +96,24 @@
               }
             }
           }
+        },
+        "vi" : {
+          "variations" : {
+            "device" : {
+              "mac" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thêm các thói quen của bạn bằng cách nhấn vào nút ở phía dưới"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thêm các thói quen của bạn bằng cách nhấn vào nút ở phía dưới"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -87,6 +123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hủy"
           }
         }
       }
@@ -98,6 +140,12 @@
             "state" : "translated",
             "value" : "Eliminar"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa"
+          }
         }
       }
     },
@@ -107,6 +155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eliminar Rutina"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa Thói quen"
           }
         }
       }
@@ -118,6 +172,12 @@
             "state" : "translated",
             "value" : "Descartar Cambios"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hủy các thay đổi"
+          }
         }
       }
     },
@@ -127,6 +187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hecho"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoàn thành"
           }
         }
       }
@@ -138,6 +204,12 @@
             "state" : "translated",
             "value" : "No se han agregado rutinas"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có thói quen được thêm"
+          }
         }
       }
     },
@@ -147,6 +219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notas"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghi chú"
           }
         }
       }
@@ -158,6 +236,12 @@
             "state" : "translated",
             "value" : "Nombre de la Rutina"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên Thói quen"
+          }
         }
       }
     },
@@ -168,6 +252,12 @@
             "state" : "translated",
             "value" : "Cuándo"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi nào"
+          }
         }
       }
     },
@@ -177,6 +267,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tus\nRutinas"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thói quen \ncủa bạn"
           }
         }
       }
