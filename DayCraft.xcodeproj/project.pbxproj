@@ -13,6 +13,7 @@
 		A00EE9082AFEAD2F004A004E /* AddRoutineSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */; };
 		A023EB892B054DD700608572 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023EB882B054DD700608572 /* Routine.swift */; };
 		A0265B352AFF2EA400A29C25 /* IconContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0265B342AFF2EA400A29C25 /* IconContainerView.swift */; };
+		A043CFD22B1493070046ECBA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A043CFD12B1493070046ECBA /* Localizable.xcstrings */; };
 		A06A5A9D2AFE610C00AD0907 /* DayCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06A5A9C2AFE610C00AD0907 /* DayCraftApp.swift */; };
 		A06A5A9F2AFE610C00AD0907 /* FocusScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06A5A9E2AFE610C00AD0907 /* FocusScreen.swift */; };
 		A06A5AA12AFE610D00AD0907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A06A5AA02AFE610D00AD0907 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		A00EE9072AFEAD2F004A004E /* AddRoutineSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineSheet.swift; sourceTree = "<group>"; };
 		A023EB882B054DD700608572 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		A0265B342AFF2EA400A29C25 /* IconContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconContainerView.swift; sourceTree = "<group>"; };
+		A043CFD12B1493070046ECBA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A06A5A992AFE610C00AD0907 /* DayCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06A5A9C2AFE610C00AD0907 /* DayCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCraftApp.swift; sourceTree = "<group>"; };
 		A06A5A9E2AFE610C00AD0907 /* FocusScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusScreen.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		A06A5A902AFE610C00AD0907 = {
 			isa = PBXGroup;
 			children = (
+				A043CFD12B1493070046ECBA /* Localizable.xcstrings */,
 				A06A5A9B2AFE610C00AD0907 /* DayCraft */,
 				A06A5A9A2AFE610C00AD0907 /* Products */,
 				A08E38112B0F85CB005B0D2D /* Frameworks */,
@@ -268,6 +271,9 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				vi,
 			);
 			mainGroup = A06A5A902AFE610C00AD0907;
 			productRefGroup = A06A5A9A2AFE610C00AD0907 /* Products */;
@@ -286,6 +292,7 @@
 			files = (
 				A06A5AA42AFE610D00AD0907 /* Preview Assets.xcassets in Resources */,
 				A06A5AA12AFE610D00AD0907 /* Assets.xcassets in Resources */,
+				A043CFD22B1493070046ECBA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

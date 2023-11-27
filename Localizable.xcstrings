@@ -1,0 +1,42 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add your routines by tapping the button above" : {
+
+    },
+    "Add your routines by tapping the button below" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete Routine" : {
+
+    },
+    "Discard Changes" : {
+
+    },
+    "Done" : {
+
+    },
+    "No Routines Added" : {
+
+    },
+    "Notes" : {
+
+    },
+    "Routine Name" : {
+
+    },
+    "When" : {
+
+    },
+    "Your\nRoutines" : {
+
+    }
+  },
+  "version" : "1.0"
+}
