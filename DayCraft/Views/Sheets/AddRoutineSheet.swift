@@ -112,8 +112,9 @@ private struct RoutineDetailsView: View {
                 Circle()
                     .frame(height: 100)
                 Image(systemName: selectedIcon)
+                    .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .scaleEffect(2.5)
+                    .frame(width: 50, height: 50)
                     .foregroundStyle(.background)
             }
             Spacer().frame(width: 12)
