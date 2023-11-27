@@ -31,6 +31,8 @@ struct FocusScreen: View {
 
 private struct FocusView: View {
     
+    @Environment(\.horizontalSizeClass) var orientation
+    
     var routines: [Routine]
     var viewModel = FocusScreenViewModel()
     
@@ -45,7 +47,7 @@ private struct FocusView: View {
                     Image(systemName: currentRoutine.icon)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 180, height: 180)
+                        .frame(width: orientation == .compact ? 180:120, height: orientation == .compact ? 180:120)
                         .foregroundStyle(.background)
                 }
                 .padding(.horizontal,16)

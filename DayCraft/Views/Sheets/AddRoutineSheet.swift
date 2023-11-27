@@ -20,6 +20,7 @@ struct AddRoutineSheet: View {
     @State var icon: String = K.icons.first!
     
     var body: some View {
+        
         VStack{
             if showAsSheet{
                 ActionButtonsView(isShowingSheet: $isShowingSheet, name: $name, note: $note, time: $time, icon: $icon)
