@@ -45,7 +45,7 @@ Requires visionOS 1.0 or later.
 
 ## 🛠 Installation
 
-*App Name* is available on the [App Store](https://apps.apple.com/in/app/daycraft-craft-your-ideal-day/id6472771953). You can also build and run the app from source:
+*DayCraft* is available on the [App Store](https://apps.apple.com/in/app/daycraft-craft-your-ideal-day/id6472771953). You can also build and run the app from source:
 
 1. Clone the repository:
 ```bash
@@ -65,7 +65,7 @@ I welcome contributions to DayCraft! If you have suggestions for improvements or
 5. Open a pull request.
 
 ## 📄 License
-App Name is released under the [MIT License](https://opensource.org/license/mit/). See the LICENSE file for more information.
+DayCraft is released under the [MIT License](https://opensource.org/license/mit/). See the LICENSE file for more information.
 
 ## 📞 Contact
 nihalismailk@gmail.com
