@@ -41,8 +41,7 @@ Requires visionOS 1.0 or later.
 <img src="/Screenshots/6.png" style="width: 50%;">
 
 ## 🎥 Working GIF
-
-![Working GIF](link-to-working-gif)
+<img src="/Screenshots/demo.gif" style="width: 50%;" alt="Demo">
 
 ## 🛠 Installation
 
